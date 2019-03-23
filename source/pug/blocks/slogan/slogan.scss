@@ -1,0 +1,124 @@
+.slogan {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+}
+
+.slogan__text {
+  align-self: flex-start;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 66%;
+  margin-bottom: -17%;
+  padding: 10px 12px;
+  padding-bottom: 15px;
+  background-color: color(primary);
+  color: color(white);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 17%;
+    transform: translateY(100%);
+    width: 0;
+    height: 0;
+    border-width: 10px 15px;
+    border-style: solid;
+    border-top-color: color(primary);
+    border-right-color: color(primary);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.slogan__picture {
+  display: block;
+  width: 100%;
+  max-width: 690px;
+  transform: translate(10px);
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+@include respond-to(420px) {
+  .slogan__text {
+    padding: 12px 18px;
+    padding-bottom: 18px;
+    font-size: 20px;
+
+    &::after {
+      border-width: 15px 20px;
+    }
+  }
+}
+
+@include respond-to(520px) {
+  .slogan__text {
+    padding: 14px 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+
+    &::after {
+      border-width: 17px 25px;
+    }
+  }
+}
+
+@include respond-to(620px) {
+  .slogan__text {
+    padding: 20px 25px;
+    padding-bottom: 25px;
+    font-size: 28px;
+
+    &::after {
+      border-width: 21px 31px;
+    }
+  }
+}
+
+@include respond-to(720px) {
+  .slogan__text {
+    width: calc(90px + 50%);
+    margin-bottom: -115px;
+    padding: 25px 32px;
+    padding-bottom: 30px;
+    font-size: 32px;
+
+    &::after {
+      right: 65px;
+      border-width: 23px 33px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .slogan__picture {
+    transform: translate(-28px);
+  }
+
+  .slogan__text {
+    width: 625px;
+    padding: 30px 44px;
+    padding-bottom: 35px;
+    font-size: 36px;
+
+    &::after {
+      border-width: 25px 35px;
+    }
+  }
+}

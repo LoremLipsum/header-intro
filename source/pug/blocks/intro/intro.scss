@@ -1,13 +1,28 @@
 .intro {
-
+  // height: 50vh;
+  display: flex;
+  flex-direction: column;
+  // min-height: 450px;
+  padding-top: 100px;
+  background-color: color(light-gray);
+  background-image: url(../assets/images/intro.jpg);
+  background-image: url(../assets/images/intro.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .intro__wrap {
-
+  flex-grow: 1;
+  height: 100%;
+  @include wrapper;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.intro__text-wrap {
-
+.intro__slogan {
+  width: 100%;
 }
 
 .intro__image-wrap {
@@ -22,5 +37,8 @@
 }
 
 @include respond-to(large) {
-
+  .intro {
+    min-height: 882px;
+    // padding-top:
+  }
 }

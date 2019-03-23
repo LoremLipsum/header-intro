@@ -1,6 +1,5 @@
 mixin intro(data)
     +el({
-        tag: 'article',
         class: 'intro',
         mix: data.mix,
         mod: data.mod,
@@ -9,6 +8,6 @@ mixin intro(data)
         +el({
             class: 'intro__wrap',
         })
-            +el({
-                class: 'intro__slogan',
+            +slogan({
+                mix: 'intro__slogan',
             })

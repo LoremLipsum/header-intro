@@ -65,6 +65,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
+    "gulp-webp": "^4.0.1",
     "gulp-zip": "^4.2.0",
     "gulplog": "^1.0.0",
     "mkdirp": "^0.5.1",

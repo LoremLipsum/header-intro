@@ -1,0 +1,37 @@
+mixin field(data)
+    if !data.textarea
+        +el({
+            tag: 'label',
+            class: 'field',
+            mod: data.mod,
+            mix: data.mix,
+            js: data.js,
+        })
+            +el({
+                tag: data.tag ? data.tag : 'input',
+                class: 'field__input',
+                type: data.type,
+                placeholder: data.placeholder,
+                value: data.value,
+                name: data.name,
+                pattern: data.pattern,
+                tabindex: '0',
+                readonly: data.readonly,
+                js: data.type == 'tel' ? 'input-tel' : 'input',
+                min: data.min,
+                max: data.max,
+            })&attributes(attributes)
+            if data.icon
+                +el({
+                    tag: 'span',
+                    class: 'field__icon',
+                    after: {
+                        tag: 'svg',
+                        icon: 'eye',
+                    }
+                })
+            +el({
+                tag: 'span',
+                class: 'hidden',
+                text: data.label,
+            })

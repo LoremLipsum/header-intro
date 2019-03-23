@@ -1005,39 +1005,6 @@ body > *
     }
 }
 
-.list
-{
-    padding: 0;
-
-    list-style-type: none;
-}
-
-.list__item
-{
-    position: relative;
-
-    padding-left: 40px;
-}
-.list__item::before
-{
-    position: absolute;
-    top: 10px;
-    left: 0;
-
-    width: 30px;
-    height: 5px; 
-
-    content: '';
-}
-
-@media (min-width: 1200px)
-{
-    .list__item::before
-    {
-        top: 12px;
-    }
-}
-
 .phone-header__number
 {
     font-size: 18px;

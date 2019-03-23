@@ -1,0 +1,2 @@
+objectFitImages();
+svg4everybody();

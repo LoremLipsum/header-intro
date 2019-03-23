@@ -1,0 +1,35 @@
+mixin header(data)
+    +el({
+        tag: 'header',
+        class: 'header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'header__wrapper',
+        })
+            .header__top
+                +logo({
+                    mix: 'header__logo',
+                })
+                +phone-header({
+                    mix: 'header__phone',
+                })
+            +button-nav({
+                mix: 'header__button-nav',
+            })
+            nav.header__main-nav
+                +main-nav({
+                    items: [
+                        'Услуги',
+                        'Преимущества',
+                        'Материалы',
+                        'Портфолио',
+                        'Отзывы',
+                        'Контакты',
+                    ],
+                })
+                +phone-header({
+                    mix: 'header__phone',
+                })

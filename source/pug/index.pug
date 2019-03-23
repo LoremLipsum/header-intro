@@ -1,0 +1,11 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Lipsum'
+    - var main = true
+
+block content
+    .content
+        +intro({
+            mix: 'content__block',
+        })

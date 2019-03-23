@@ -1,0 +1,45 @@
+$fonts: (
+  primary: #{"'Exo 2'", "Roboto", "Helvetica CY", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+  monospace: #{"SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace},
+);
+
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1200px,
+);
+
+$pads: (
+  small: 20px,
+  medium: 30px,
+  large: 40px,
+);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$colors: (
+  primary: #dd2c14,
+  secondary: #43b3e7,
+  light-gray: #c9c9c6,
+  gray: #999,
+  dark-gray: #333,
+  black: #000,
+  white: #fff,
+  error: #d0021b,
+  disabled: #c9c9c6,
+);
+
+$durations: (
+  normal: 0.3s,
+  slow: 0.8s,
+  input: 0.3s,
+  button: 0.3s,
+  link: 0.3s,
+);
+
+$func: (
+  primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+$change-color: 15%;

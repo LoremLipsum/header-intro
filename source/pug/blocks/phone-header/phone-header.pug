@@ -1,0 +1,18 @@
+mixin phone-header(data)
+    +el({
+        class: 'phone-header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })
+        +el({
+            tag: 'a',
+            href: 'tel:79787872546',
+            class: 'phone-header__number',
+            text: '+7 (978) 787-25-46',
+        })
+        +el({
+            tag: "button",
+            class: 'phone-header__order',
+            text: 'Заказать звонок',
+        })

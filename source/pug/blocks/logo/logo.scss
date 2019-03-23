@@ -1,0 +1,57 @@
+$logo-w-sm: 40px;
+$logo-h-sm: 40px;
+$logo-w-lg: auto;
+$logo-h-lg: 70px;
+
+.logo {
+  display: block;
+  width: $logo-w-sm;
+  height: $logo-h-sm;
+  text-decoration: none !important;
+}
+
+.logo__image {
+  display: block;
+  width: $logo-w-sm;
+  height: $logo-h-sm;
+}
+
+.logo__text {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .logo {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .logo__image {
+    margin-right: 12px;
+  }
+
+  .logo__text {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@include respond-to(large) {
+  .logo {
+    width: $logo-w-lg;
+    height: $logo-h-lg;
+  }
+
+  .logo__image {
+    width: $logo-h-lg;
+    height: $logo-h-lg;
+    margin-right: 15px;
+  }
+
+  .logo__text {
+    font-size: 17px
+  }
+}

@@ -951,23 +951,7 @@ body > *
 
 .intro
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
-
-    padding-top: 100px;
-
-    background-color: #c9c9c6;
-    background-image: url(../assets/images/intro.jpg);
-    background-image: url(../assets/images/intro.webp);
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    position: relative;
 }
 
 .intro__wrap
@@ -1011,16 +995,111 @@ body > *
     }
 }
 
+.intro__slogan-section
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    padding-top: 100px;
+
+    background-color: #c9c9c6;
+    background-image: url(../assets/images/intro.jpg);
+    background-image: url(../assets/images/intro.webp);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+
+.intro__slogan-wrap
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+@media (min-width: 768px)
+{
+    .intro__slogan-wrap
+    {
+        padding-right: 30px; 
+        padding-left: 30px;
+    }
+}
+@media (min-width: 1220px)
+{
+    .intro__slogan-wrap
+    {
+        width: 1220px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+}
+
 .intro__slogan
+{
+    width: 100%;
+}
+
+.intro__features
+{
+    width: 100%;
+}
+
+.intro__price
 {
     width: 100%;
 }
 
 @media (min-width: 1220px)
 {
-    .intro
+    .intro__slogan-section
     {
-        min-height: 882px;
+        margin-top: auto;
+        padding-top: 210px;
+    }
+    .intro__features-section
+    {
+        position: absolute;
+
+        width: 100%; 
+
+        -webkit-transform: translateY(calc(-100% - 90px));
+            -ms-transform: translateY(calc(-100% - 90px));
+                transform: translateY(calc(-100% - 90px));
+    }
+    .intro__features-wrap
+    {
+        width: 1220px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 40px; 
+        padding-left: 40px;
+    }
+    .intro__features
+    {
+        width: 50%;
     }
 }
 
@@ -1229,6 +1308,124 @@ body > *
     .phone-header__order
     {
         margin-left: auto;
+    }
+}
+
+.intro-features
+{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.intro-features__item
+{
+    line-height: 1.2; 
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding: 10px 20px;
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, .9);
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.intro-features__icon
+{
+    display: block;
+
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.intro-features__main-text
+{
+    font-size: 16px;
+    font-weight: bold;
+
+    display: block;
+
+    text-transform: uppercase;
+}
+
+.intro-features__sub-text
+{
+    font-size: 14px; 
+
+    display: block;
+}
+
+@media (min-width: 620px)
+{
+    .intro-features
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .intro-features__item
+    {
+        width: 33.33%;
+
+        border-right: 1px solid rgba(255, 255, 255, .5);
+    }
+}
+
+@media (min-width: 768px)
+{
+    .intro-features__item
+    {
+        padding: 15px 20px;
+    }
+    .intro-features__icon
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .intro-features__main-text
+    {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1220px)
+{
+    .intro-features
+    {
+        display: block;
+    }
+    .intro-features__item
+    {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+
+        border-right: none;
+    }
+    .intro-features__item:last-child
+    {
+        margin-bottom: 0;
+    }
+    .intro-features__icon
+    {
+        width: 32px;
+        height: 32px;
+    }
+    .intro-features__main-text
+    {
+        font-size: 24px;
     }
 }
 

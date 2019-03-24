@@ -10,6 +10,11 @@ mixin intro(data)
                 +slogan({
                     mix: 'intro__slogan',
                 })
+                +button({
+                    mix: 'intro__btn',
+                    mod: 'bg-primary',
+                    text: 'Узнать цену'
+                })
         .intro__features-section
             .intro__features-wrap
                 +intro-features({
@@ -32,5 +37,8 @@ mixin intro(data)
                         },
                     ]
                 })
-        .intro__price-section
-            .intro__price-wrap
+        .intro__price-order-section
+            .intro__price-order-wrap
+                +price-order({
+                    mix: 'intro__price-order'
+                })

@@ -1,17 +1,21 @@
-.button {
+.btn {
   flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
   font-family: font(primary);
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-decoration: none;
+
+  &--bg-primary,
+  &--b-primary,
+  &--disabled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 
   &:disabled,
   &--disabled {
@@ -27,7 +31,6 @@
 
     @include hover {
       background-color: darken(color(primary), $change-color);
-      color: rgba(#fff, 0.85);
     }
   }
 
@@ -46,22 +49,36 @@
   }
 }
 
-.button__icon {
+.btn__icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-left: 10px;
 
   svg {
-    @include ofi-contain-center;
+    width: 100%;
+    height: 100%;
     fill: currentColor;
   }
 }
 
 @include respond-to(medium) {
-  .button {
-    padding: 14px 24px;
-    font-size: 16px;
-    line-height: 22px;
+  .btn {
+    &--bg-primary,
+    &--b-primary,
+    &--disabled {
+      padding: 12px 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .btn {
+    &--bg-primary,
+    &--b-primary,
+    &--disabled {
+      font-size: 24px;
+    }
   }
 }

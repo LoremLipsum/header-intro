@@ -1,7 +1,10 @@
 .header {
   position: fixed;
   z-index: 10;
-  background-color: color(white);
+
+  .overlay {
+    z-index: -10;
+  }
 }
 
 .header__wrapper {
@@ -10,10 +13,11 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: color(white);
   box-shadow: 0 0 5px 0 rgba(#000, 0.3);
 }
 
-.header__top {
+.header__logo-phone-wrap {
   margin-right: auto;
 
   .header__phone {
@@ -57,13 +61,13 @@
 @include respond-to(large) {
   .header {
     position: absolute;
-    background-color: transparent;
   }
 
   .header__wrapper {
     flex-direction: column;
     padding-top: 75px;
     padding-bottom: 0;
+    background-color: transparent;
     box-shadow: none;
   }
 

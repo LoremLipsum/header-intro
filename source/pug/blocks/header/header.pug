@@ -9,7 +9,7 @@ mixin header(data)
         +el({
             class: 'header__wrapper',
         })
-            .header__top
+            .header__logo-phone-wrap
                 +logo({
                     mix: 'header__logo',
                 })
@@ -33,3 +33,6 @@ mixin header(data)
                 +phone-header({
                     mix: 'header__phone',
                 })
+            +overlay({
+                mod: 'header'
+            })

@@ -1,11 +1,10 @@
 import { $ } from '../../../scripts/global/selector';
 import { ACTIVE } from '../../../scripts/global/const';
 import onEsc from '../../../scripts/global/onEsc';
-// import closeModalOnDock from '../../../scripts/global/closeModalOnDock';
 
 const mainNav = $('.header__main-nav');
 const btnOpen = $('.header__button-nav');
-const overlay = $('.overlay');
+const overlay = $('.overlay--header');
 
 const toggle = () => {
   mainNav.classList.toggle(ACTIVE);
@@ -26,9 +25,9 @@ const onBtnOpenClick = e => {
 
 const onEscKeyup = e => {
   e.preventDefault();
-  onEsc(e, close());
+  onEsc(e, close);
 };
 
 btnOpen.addEventListener('click', onBtnOpenClick);
-// document.addEventListener('mouseup', onDocClick);
+overlay.addEventListener('click', onBtnOpenClick);
 document.addEventListener('keyup', onEscKeyup);

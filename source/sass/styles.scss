@@ -1,6 +1,3 @@
-// fonts
-// @import "../assets/fonts/georgia/georgia";
-
 // global
 @import "./global/vars";
 @import "./global/functions";
@@ -11,10 +8,12 @@
 @import "./blocks/sticky-footer";
 @import "./blocks/content";
 
-// pug
+// blocks
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-remove/button-remove";
+@import "../pug/blocks/field/field";
+@import "../pug/blocks/checkbox/checkbox";
 @import "../pug/blocks/overlay/overlay";
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav/main-nav";
@@ -23,6 +22,5 @@
 @import "../pug/blocks/slogan/slogan";
 @import "../pug/blocks/phone-header/phone-header";
 @import "../pug/blocks/intro-features/intro-features";
-@import "../pug/blocks/field/field";
-@import "../pug/blocks/checkbox/checkbox";
-@import "../pug/blocks/price-form/price-form";
+@import "../pug/blocks/price-order/price-order";
+@import "../pug/blocks/modal/modal";

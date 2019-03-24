@@ -17,7 +17,7 @@ mixin field(data)
                 pattern: data.pattern,
                 tabindex: '0',
                 readonly: data.readonly,
-                js: data.type == 'tel' ? 'input-tel' : 'input',
+                required: data.required,
                 min: data.min,
                 max: data.max,
             })&attributes(attributes)
@@ -27,11 +27,11 @@ mixin field(data)
                     class: 'field__icon',
                     after: {
                         tag: 'svg',
-                        icon: 'eye',
+                        icon: data.icon,
                     }
                 })
             +el({
                 tag: 'span',
-                class: 'hidden',
+                class: data.isLabel ? 'field__label' : 'hidden',
                 text: data.label,
             })

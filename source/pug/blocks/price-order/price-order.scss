@@ -28,15 +28,11 @@
   }
 }
 
-.price-order__checkbox {
-  font-size: 13px;
-}
 
 .price-order__submit {
   width: 100%;
   margin-bottom: 24px;
 }
-
 
 @include respond-to(medium) {
   .price-order__heading {

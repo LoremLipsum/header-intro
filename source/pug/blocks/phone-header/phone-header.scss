@@ -9,21 +9,24 @@
   text-decoration: none;
 }
 
-.phone-header__order {
+.phone-header__link {
   display: block;
   color: color(primary);
   font-size: 14px;
   text-decoration: underline;
   line-height: 1.3;
-}
 
+  @include hover {
+    text-decoration: none;
+  }
+}
 
 @include respond-to(large) {
   .phone-header__number {
     font-size: 20px;
   }
 
-  .phone-header__order {
+  .phone-header__link {
     margin-left: auto;
   }
 }

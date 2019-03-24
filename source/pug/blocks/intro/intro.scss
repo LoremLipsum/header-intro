@@ -37,15 +37,6 @@
   width: 100%;
 }
 
-.intro__features-section {
-  // display: flex;
-  // flex-direction: column;
-}
-
-.intro__features-wrap {
-
-}
-
 .intro__features {
   width: 100%;
 }
@@ -53,14 +44,6 @@
 .intro__price-order-section {
   display: none;
 }
-
-// .intro__price-order-wrap {
-//   @include wrapper;
-// }
-
-// .intro__price-order {
-//   display: none;
-// }
 
 .intro__btn {
   position: absolute;
@@ -131,17 +114,13 @@
     z-index: 1;
   }
 
-  .intro__price-order-wrap {
-
-  }
-
   .intro__btn {
     display: none;
   }
 
   .intro__price-order {
     display: block;
-    width: 360px;
+    width: 365px;
     margin-left: auto;
     padding: 30px 40px;
     background-color: rgba(#fff, 0.9);

@@ -58,15 +58,12 @@ $heading-styles: (
 );
 
 $durations: (
-  normal: 0.3s,
-  slow: 0.8s,
-  input: 0.3s,
-  button: 0.3s,
-  link: 0.3s,
+  md: 0.3s,
+  lg: 0.6s,
 );
 
 $func: (
   primary: cubic-bezier(0.25, 0.1, 0.25, 1),
 );
 
-$change-color: 15%;
+$change-color: 10%;

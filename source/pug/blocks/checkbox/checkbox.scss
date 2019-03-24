@@ -15,6 +15,21 @@ $checkbox-size: 14px;
     }
   }
 
+  &--small {
+    .checkbox__label {
+      color: color(gray);
+      font-size: 12.5px;
+
+      &::before {
+        top: 1px;
+      }
+
+      &::after {
+        top: 4px;
+      }
+    }
+  }
+
   &--disabled {
     .checkbox__input {
       &:disabled {
@@ -37,14 +52,14 @@ $checkbox-size: 14px;
   position: relative;
   display: block;
   padding-left: 22px;
-  transition: duration(input) func(primary);
+  transition: duration(md) func(primary);
 
   &::before,
   &::after {
     content: "";
     position: absolute;
     display: block;
-    transition: duration(input) func(primary);
+    transition: duration(md) func(primary);
   }
 
   &::before {

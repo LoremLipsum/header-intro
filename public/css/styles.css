@@ -4,6 +4,8 @@
 body,
 html
 {
+    position: relative;
+
     overflow-x: hidden; 
 
     width: 100%;
@@ -1469,9 +1471,8 @@ body > *
 
     padding-top: 100px;
 
-    background-color: #c9c9c6;
+    background-color: rgba(0, 0, 0, .2);
     background-image: url(../assets/images/intro.jpg);
-    background-image: url(../assets/images/intro.webp);
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
@@ -1595,12 +1596,13 @@ body > *
     .intro__price-order-section
     {
         position: absolute;
+        top: 100%;
 
         width: 100%; 
 
-        -webkit-transform: translateY(calc(-100% - 90px));
-            -ms-transform: translateY(calc(-100% - 90px));
-                transform: translateY(calc(-100% - 90px));
+        -webkit-transform: translateY(-100%) translateY(-90px);
+            -ms-transform: translateY(-100%) translateY(-90px);
+                transform: translateY(-100%) translateY(-90px);
     }
     .intro__features-wrap,
     .intro__price-order-wrap

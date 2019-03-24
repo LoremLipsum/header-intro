@@ -49,10 +49,9 @@
     <link rel="stylesheet" href="./css/styles.min.css">
   </head>
   <body>
-    <div class="overlay"></div>
     <header class="header">
       <div class="header__wrapper">
-        <div class="header__top">
+        <div class="header__logo-phone-wrap">
           <a class="logo header__logo">
             <img class="logo__image" src="./assets/images/logo.svg" width="60" height="60" alt="logo">
             <span class="logo__text">КРОВЛИ, ФАСАДЫ, БМЗ, <br>МЕТАЛЛОКОНСТРУКЦИИ
@@ -105,6 +104,8 @@
             </button>
           </div>
         </nav>
+        <div class="overlay overlay--header">
+        </div>
       </div>
     </header>
     <main class="content">
@@ -119,6 +120,8 @@
                 <source srcset="./assets/images/slogan.jpg" type="image/jpeg"><img src="./assets/image/slogan.jpg" alt="Строитель">
               </picture>
             </div>
+            <button class="btn btn--bg-primary intro__btn" type="button">Узнать цену
+            </button>
           </div>
         </div>
         <div class="intro__features-section">
@@ -160,11 +163,96 @@
             </ul>
           </div>
         </div>
-        <div class="intro__price-section">
-          <div class="intro__price-wrap"></div>
+        <div class="intro__price-order-section">
+          <div class="intro__price-order-wrap">
+            <div class="price-order intro__price-order">
+              <h3 class="price-order__heading">Узнайте цену за&nbsp;3&nbsp;минуты
+              </h3>
+              <p class="price-order__text">Оставьте заявку на расчет цены и&nbsp;узнайте точные сроки и&nbsp;стоимость работ
+              </p>
+              <form action="/" method="post" accept-charset="UTF-8">
+                <div class="price-order__field-group">
+                  <label class="field field--icon price-order__field">
+                    <input class="field__input" tabindex="0" required type="text">
+                    <span class="field__icon">
+                      <svg width="20" height="20">
+                        <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                      </svg>
+                    </span>
+                    <span class="hidden">Имя пользователя
+                    </span>
+                  </label>
+                  <label class="field field--icon price-order__field">
+                    <input class="field__input" tabindex="0" required type="tel">
+                    <span class="field__icon">
+                      <svg width="20" height="20">
+                        <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                      </svg>
+                    </span>
+                    <span class="hidden">Телефон
+                    </span>
+                  </label>
+                </div>
+                <button class="btn btn--bg-primary price-order__submit" type="submit">Узнать цену
+                </button>
+                <label class="checkbox price-order__checkbox">
+                  <input class="hidden checkbox__input" required type="checkbox">
+                  <span class="checkbox__label">Согласие с&nbsp;политикой конфиденциальности
+                  </span>
+                </label>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+    <div class="modal modal--price-order">
+      <div class="overlay overlay--modal active">
+      </div>
+      <div class="modal__content">
+        <button class="button-remove modal__close" type="button">
+          <span class="button-remove__icon">
+          </span>
+        </button>
+        <div class="price-order">
+          <h3 class="price-order__heading">Узнайте цену за&nbsp;3&nbsp;минуты
+          </h3>
+          <p class="price-order__text">Оставьте заявку на расчет цены и&nbsp;узнайте точные сроки и&nbsp;стоимость работ
+          </p>
+          <form action="/" method="post" accept-charset="UTF-8">
+            <div class="price-order__field-group">
+              <label class="field field--icon price-order__field">
+                <input class="field__input" tabindex="0" required type="text">
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                  </svg>
+                </span>
+                <span class="hidden">Имя пользователя
+                </span>
+              </label>
+              <label class="field field--icon price-order__field">
+                <input class="field__input" tabindex="0" required type="tel">
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                  </svg>
+                </span>
+                <span class="hidden">Телефон
+                </span>
+              </label>
+            </div>
+            <button class="btn btn--bg-primary price-order__submit" type="submit">Узнать цену
+            </button>
+            <label class="checkbox price-order__checkbox">
+              <input class="hidden checkbox__input" required type="checkbox">
+              <span class="checkbox__label">Согласие с&nbsp;политикой конфиденциальности
+              </span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./assets/libs/scripts/lib.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>

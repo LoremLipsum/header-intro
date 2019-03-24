@@ -5,9 +5,32 @@ mixin intro(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        +el({
-            class: 'intro__wrap',
-        })
-            +slogan({
-                mix: 'intro__slogan',
-            })
+        .intro__slogan-section
+            .intro__slogan-wrap
+                +slogan({
+                    mix: 'intro__slogan',
+                })
+        .intro__features-section
+            .intro__features-wrap
+                +intro-features({
+                    mix: 'intro__features',
+                    items: [
+                        {
+                            icon: 'clock',
+                            mainText: 'Быстро',
+                            subText: 'от 4-х дней'
+                        },
+                        {
+                            icon: 'hands',
+                            mainText: 'Выгодно',
+                            subText: 'наши цены Вас порадуют'
+                        },
+                        {
+                            icon: 'trophy',
+                            mainText: 'надежно',
+                            subText: 'гарантия 10 лет'
+                        },
+                    ]
+                })
+        .intro__price-section
+            .intro__price-wrap

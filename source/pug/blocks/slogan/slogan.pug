@@ -9,8 +9,9 @@ mixin slogan(data)
             class: 'slogan__text',
             text: 'Кровельные работы с&nbspгарантией 10&nbsp;лет в&nbsp;Симферополе и&nbspпо Крыму',
         })
-        +el({
-            tag: 'div',
-            class: 'slogan__picture',
+        +webp({
+            mix: 'slogan__image',
+            image: 'slogan',
+            imageExp: 'png',
+            alt: 'Строитель'
         })
-            img(src='./assets/images/slogan.png' alt='Строитель')

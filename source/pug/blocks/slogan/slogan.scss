@@ -43,16 +43,10 @@
   }
 }
 
-.slogan__picture {
-  display: block;
+.slogan__image {
   width: 100%;
   max-width: 690px;
   transform: translate(10px);
-
-  img {
-    display: block;
-    width: 100%;
-  }
 }
 
 @include respond-to(420px) {
@@ -106,14 +100,23 @@
   }
 }
 
+@include respond-to(medium) {
+  .slogan__image {
+    display: block;
+    width: 690px;
+    height: 592px;
+  }
+}
+
+
 @include respond-to(large) {
-  .slogan__picture {
-    transform: translate(-28px);
+  .slogan__image {
+    transform: translate(-30px);
   }
 
   .slogan__text {
     width: 625px;
-    padding: 30px 44px;
+    padding: 30px 40px;
     padding-bottom: 35px;
     font-size: 36px;
 

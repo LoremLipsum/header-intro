@@ -1,7 +1,3 @@
-.phone-order{
-
-}
-
 .phone-order__heading {
   margin-bottom: 10px;
   font-size: 24px;
@@ -28,18 +24,7 @@
   }
 }
 
-
 .phone-order__submit {
   width: 100%;
   margin-bottom: 24px;
-}
-
-@include respond-to(medium) {
-  .phone-order__heading {
-  }
-}
-
-@include respond-to(large) {
-  .phone-order__heading {
-  }
 }

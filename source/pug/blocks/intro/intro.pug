@@ -6,6 +6,12 @@ mixin intro(data)
         js: data.js,
     })&attributes(attributes)
         .intro__slogan-section
+            +webp({
+                mix: 'intro__bg-image',
+                image: 'intro-bg',
+                imageExp: 'jpg',
+                alt: 'Дом с кровлей'
+            })
             .intro__slogan-wrap
                 +slogan({
                     mix: 'intro__slogan',

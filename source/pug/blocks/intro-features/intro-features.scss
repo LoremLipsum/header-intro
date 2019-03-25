@@ -48,7 +48,7 @@
 
 @include respond-to(medium) {
   .intro-features__item {
-    padding: 15px 20px;
+    padding: 20px;
   }
 
   .intro-features__icon {
@@ -69,7 +69,6 @@
   .intro-features__item {
     width: 100%;
     margin-bottom: 20px;
-    padding: 20px 20px;
     border-right: none;
 
     &:last-child {

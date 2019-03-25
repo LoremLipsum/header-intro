@@ -1,6 +1,3 @@
-.features {
-
-}
 
 .features__heading-wrap {
   @include wrapper;
@@ -18,10 +15,6 @@
   .features__heading {
     width: calc(50% - 70px);
     margin-left: auto;
-  }
-
-  .features__heading-wrap {
-    // margin-bottom: -90px;
   }
 
   .features__item {

@@ -2,12 +2,12 @@
   "version": "1.0.0",
   "name": "Lipsum",
   "launch_path": "/index.html",
-  "description": "A front-end template",
+  "description": "",
   "icons": {
-    "128": "assets/favicons/icon-128x128.png"
+    "128": ""
   },
   "developer": {
-    "name": "Lorem Lipsum",
+    "name": "Lorem ipsum",
     "url": ""
   },
   "installs_allowed_from": [
@@ -19,7 +19,7 @@
   "locales": {
     "ru": {
       "name": "Lipsum",
-      "description": "A front-end template"
+      "description": ""
     }
   }
 }

@@ -60,7 +60,7 @@
           <div class="phone-header header__phone">
             <a class="phone-header__number" href="tel:79787872546">+7 (978) 787-25-46
             </a>
-            <button class="phone-header__link" type="button">Заказать звонок
+            <button class="phone-header__btn" type="button">Заказать звонок
             </button>
           </div>
         </div>
@@ -100,7 +100,7 @@
           <div class="phone-header header__phone">
             <a class="phone-header__number" href="tel:79787872546">+7 (978) 787-25-46
             </a>
-            <button class="phone-header__link" type="button">Заказать звонок
+            <button class="phone-header__btn" type="button">Заказать звонок
             </button>
           </div>
         </nav>
@@ -243,6 +243,53 @@
             <button class="btn btn--bg-primary price-order__submit" type="submit">Узнать цену
             </button>
             <label class="checkbox checkbox--small price-order__checkbox">
+              <input class="hidden checkbox__input" required type="checkbox">
+              <span class="checkbox__label">Согласие с&nbsp;политикой конфиденциальности
+              </span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--phone-order">
+      <div class="overlay overlay--modal active">
+      </div>
+      <div class="modal__content">
+        <button class="button-remove modal__close" type="button">
+          <span class="button-remove__icon">
+          </span>
+        </button>
+        <div class="phone-order">
+          <h3 class="phone-order__heading">Закажите звонок
+          </h3>
+          <p class="phone-order__text">Оставьте заявку и в течение часа вам перезвонят
+          </p>
+          <form action="/" method="post" accept-charset="UTF-8">
+            <div class="phone-order__field-group">
+              <label class="field field--icon phone-order__field">
+                <input class="field__input" tabindex="0" required type="text">
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#user"></use>
+                  </svg>
+                </span>
+                <span class="hidden">Имя пользователя
+                </span>
+              </label>
+              <label class="field field--icon phone-order__field">
+                <input class="field__input" tabindex="0" required type="tel">
+                <span class="field__icon">
+                  <svg width="20" height="20">
+                    <use xlink:href="./assets/sprites/svg/sprite.svg#phone"></use>
+                  </svg>
+                </span>
+                <span class="hidden">Телефон
+                </span>
+              </label>
+            </div>
+            <button class="btn btn--bg-primary phone-order__submit" type="submit">Заказать звонок
+            </button>
+            <label class="checkbox checkbox--small phone-order__checkbox">
               <input class="hidden checkbox__input" required type="checkbox">
               <span class="checkbox__label">Согласие с&nbsp;политикой конфиденциальности
               </span>

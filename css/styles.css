@@ -1823,7 +1823,7 @@ body > *
     text-decoration: none;
 }
 
-.phone-header__link
+.phone-header__btn
 {
     font-size: 14px;
     line-height: 1.3; 
@@ -1834,8 +1834,8 @@ body > *
 
     color: #dd2c14;
 }
-.phone-header__link:hover,
-.phone-header__link:focus
+.phone-header__btn:hover,
+.phone-header__btn:focus
 {
     text-decoration: none;
 }
@@ -1846,7 +1846,7 @@ body > *
     {
         font-size: 20px;
     }
-    .phone-header__link
+    .phone-header__btn
     {
         margin-left: auto;
     }
@@ -2021,20 +2021,31 @@ body > *
     left: 0;
 
     display: none;
+        flex-direction: column;
 
     width: 100%;
-    height: 100vh;
+    height: 100vh; 
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .modal.active
 {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .modal__content
 {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
 
     overflow-y: scroll; 
 
@@ -2055,25 +2066,23 @@ body > *
 
 @media (min-width: 768px)
 {
-    .modal--price-order .modal__content
+    .modal
+    {
+        padding: 50px;
+    }
+    .modal--price-order .modal__content,
+    .modal--phone-order .modal__content
     {
         width: 380px;
     }
     .modal__content
     {
-        top: 100px;
-        left: 50%;
-
         overflow-y: auto; 
 
         width: auto;
         height: auto;
         padding: 30px 40px;
         padding-top: 60px;
-
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
 
         background-color: rgba(255, 255, 255, .9);
     }
@@ -2085,4 +2094,44 @@ body > *
     {
         display: none;
     }
+}
+
+.phone-order__heading
+{
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.phone-order__text
+{
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+.phone-order__field-group
+{
+    margin-bottom: 24px;
+}
+
+.phone-order__field
+{
+    margin-bottom: 18px;
+}
+.phone-order__field:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.phone-order__submit
+{
+    width: 100%;
+    margin-bottom: 24px;
 }

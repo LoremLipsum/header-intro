@@ -8,7 +8,7 @@
     "s": "npm run start",
     "create": "node create.js",
     "c": "npm run create",
-    "deploy": "set NODE_ENV=production gulp build && gulp serviceWorker && gulp copy && git add . && git commit -m 'deploy' && git push origin master && gulp deploy && git checkout gh-pages && git push origin gh-pages && git checkout master --force",
+    "deploy": "set NODE_ENV=production gulp build && gulp copy && git add . && git commit -m 'deploy' && git push origin master && gulp deploy && git checkout gh-pages && git push origin gh-pages && git checkout master --force",
     "d": "npm run deploy",
     "build": "gulp build",
     "b": "npm run build",
@@ -18,7 +18,7 @@
     "l:st": "npm run lint:styles",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "l": "npm run lint",
-    "zip": "set NODE_ENV=production gulp build && gulp serviceWorker && gulp copy && gulp zip",
+    "zip": "set NODE_ENV=production gulp build && gulp copy && gulp zip",
     "z": "npm run zip"
   },
   "keywords": [

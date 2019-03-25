@@ -9,9 +9,22 @@ module.exports = () => (
     config.src.scripts
   ])
     .pipe($.plumber({ errorHandler: config.onError }))
+
     .pipe(webpackStream({
       output: {
         filename: 'scripts.js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['@babel/env']
+            }
+          }
+        ]
       },
       mode: 'production',
     }))

@@ -1,0 +1,46 @@
+mixin phone-order(data)
+    +el({
+        class: 'phone-order',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'phone-order__heading',
+            text: 'Закажите звонок'
+        })
+        +el({
+            tag: 'p',
+            class: 'phone-order__text',
+            text: 'Оставьте заявку и в течение часа вам перезвонят'
+        })
+        +form({})
+            .phone-order__field-group
+                +field({
+                    mix: 'phone-order__field',
+                    icon: 'user',
+                    mod: 'icon',
+                    label: 'Имя пользователя',
+                    required: true
+                })
+                +field({
+                    mix: 'phone-order__field',
+                    icon: 'phone',
+                    mod: 'icon',
+                    label: 'Телефон',
+                    type: 'tel',
+                    required: true
+                })
+            +button({
+                mix: 'phone-order__submit',
+                mod: 'bg-primary',
+                type: 'submit',
+                text: 'Заказать звонок'
+            })
+            +checkbox({
+                mix: 'phone-order__checkbox',
+                mod: 'small',
+                label: 'Согласие с&nbsp;политикой конфиденциальности',
+                required: true,
+            })

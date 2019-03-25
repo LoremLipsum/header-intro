@@ -1,0 +1,45 @@
+.phone-order{
+
+}
+
+.phone-order__heading {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.phone-order__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.phone-order__field-group {
+  margin-bottom: 24px;
+}
+
+.phone-order__field {
+  margin-bottom: 18px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+.phone-order__submit {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+@include respond-to(medium) {
+  .phone-order__heading {
+  }
+}
+
+@include respond-to(large) {
+  .phone-order__heading {
+  }
+}
